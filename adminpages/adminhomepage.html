@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/9tQ3krq/Kicks-Nation-Ecommerce-logo.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KicksNation Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!--link to connect to font awesome 4 to use different icons, just type font awesome 4 cdn and click on first link and copy the url and past it here with rel="stylesheet"-->       
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <script defer src = "../managementjavascript/ui.js" type = "module"></script>
+    <script defer src = "admin.js" type = "module"></script>
+    <script defer src = "adminhomepage.js" type = "module"></script>
+    <link rel="stylesheet" href="../CSS/adminstyle.css">
+</head>
+<body>
+    <div class="header">
+          <!--making navigation bar consist of logo and menu links-->
+          <div class="navbar">
+            <div class="logo">
+                <a href="../userhomepage/index.html"><img src="../images/Logo/KicksNation NoText Logo-min.png" alt="KicksNation logo" width=125px></a>
+                <img class="logotext" src="../images/Logo/logoletters1.png" alt="KicksNation logo" width="170px">
+            </div>
+            <!--menu-->
+            <nav>         
+              </i>Hello <span id="admin-name">sawd</span>
+            </nav>
+            
+        </div> 
+        <div class="logo"> - Admin Mode -</div>
+        <nav>
+            <ul>
+                <li><a id="dashboard"><i class="fa fa-fw fa-home"></i>Dashboard</a></li>
+                <li><a id="products"><i class="fi fi-ss-hiking-boot"></i>Products</a></li>
+                <li><a id="settings">Settings</a></li>
+                <li><a id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="dashboard">
+            <h1>Dashboard</h1>
+            <div class="card">
+                <h2>Product Management</h2>
+                <button id="addproductbtn">Add Product</button>
+                <button id="viewproductsurl">View Products</button>
+            </div>
+            <div class="card" id ="Viewsalesurl">
+                <h2>View sales</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <form id="ItemAddForm">
+        <table>
+            <thead>
+                <tr><th colspan="2"><span class="close" id="closeitem">&times;</span></th></tr>
+                <tr><td colspan="2"><label style="text-align: center;">Item description</label></tr></td>
+            </thead>
+            <tbody>
+                <tr><td><img id="imagedemodisplay" style="height: 200px"></td></tr>
+                <tr>
+                    <td><label>image</label></td>
+                    <td><input type ="file" placeholder="Name" id="ProductImage" accept="image/*"></td>
+                </tr>
+                <tr>
+                    <td><label>Name</label></td>
+                    <td><input type ="text" placeholder="Name" id="ProductName"></td>
+                </tr>
+                <tr>
+                    <td><label>Price</label></td>
+                    <td><input type ="text" placeholder="Price" id="ProductPrice"></td>
+                </tr>
+                <tr>
+                    <td><label>Brand</label></td>
+                    <td><select class = "dropdown" id="ProductBrand">
+                        <option>Nike</option>
+                        <option>Adidas</option>
+                        <option>Puma</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label>Item Description</label></td>
+                    <td><input type ="text" placeholder="Name" id="ProductDescription"></td>
+                </tr>
+                <tr>
+                    <td><Button type="submit" class="btn">Submit</Button></td>
+                </tr>
+            </tbody>
+        
+        </table>
+    </form>
+</body>
+</html>

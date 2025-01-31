@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/9tQ3krq/Kicks-Nation-Ecommerce-logo.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KicksNation Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!--link to connect to font awesome 4 to use different icons, just type font awesome 4 cdn and click on first link and copy the url and past it here with rel="stylesheet"-->       
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <script defer src = "../managementjavascript/ui.js" type = "module"></script>
+    <script defer src = "admin.js" type = "module"></script>
+    <script defer src = "settings.js" type = "module" ></script>
+    <link rel="stylesheet" href="../CSS/adminstyle.css">
+</head>
+<body>
+    <div class="header">
+          <!--making navigation bar consist of logo and menu links-->
+          <div class="navbar">
+            <div class="logo">
+                <a href="../userhomepage/index.html"><img src="../images/Logo/KicksNation NoText Logo-min.png" alt="KicksNation logo" width=125px></a>
+                <img class="logotext" src="../images/Logo/logoletters1.png" alt="KicksNation logo" width="170px">
+            </div>
+            <!--menu-->
+            <nav>         
+              </i>Hello <span id="admin-name">sawd</span>
+            </nav>
+        </div> 
+        <div class="logo"> - Admin Mode -</div>
+        <nav>
+            <ul>
+                <li><a id="dashboard"><i class="fa fa-fw fa-home"></i>Dashboard</a></li>
+                <li><a id="products"><i class="fi fi-ss-hiking-boot"></i>Products</a></li>
+                <li><a id="settings">Settings</a></li>
+                <li><a id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <form id="AdminInfoForm"><!--Change form-->
+            <input type="text" placeholder="Name" id = "AdminName">
+            <input type="text" placeholder="Username/optional" id = "AdminUsername">
+            <input type="password" placeholder="Password/optional" id = "AdminPassword">
+            <input type="password" placeholder="Repassword/optional" id = "AdminRePassword">
+            <button type="submit" class="btn" id="AdminChangeButton">Change Information</button>
+        </form>
+
+        <form id="AdminRegForm"><!--registration Admin form-->
+            <input type="text" placeholder="Name" id = "AdminAddName">
+            <input type="text" placeholder="Username" id = "AdminAddUsername">
+            <input type="password" placeholder="Password" id = "AdminAddPassword">
+            <input type="password" placeholder="Repassword" id = "AdminAddRePassword">
+            <button type="submit" class="btn" id="AdminAddButton">Add new Admin</button>
+    </form>    
+    </div>
+</body>

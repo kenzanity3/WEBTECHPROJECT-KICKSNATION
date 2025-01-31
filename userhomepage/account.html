@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="https://i.ibb.co/9tQ3krq/Kicks-Nation-Ecommerce-logo.png"/>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--we have added this view port tag and set initial scale to 1 so that our side shoudl be adjustable according to different devices especially for mobile devices-->
+          <title>About KicksNation </title>
+          <link rel="stylesheet" href="../CSS/style.css">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!--link to connect to font awesome 4 to use different icons, just type font awesome 4 cdn and click on first link and copy the url and past it here with rel="stylesheet"-->       
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+          <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+          <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+          <script defer src = "../managementjavascript/ui.js" type = "module"></script>
+          <script defer src = "account.js" type = "module"></script>   
+    </head>  
+
+    <body>  
+          <!--making header-->
+          <div class="header">
+            <div class="toprectangle">
+                <p> FREE Returns and FREE Shipping </p>
+            </div>
+                <!--making navigation bar consist of logo and menu links-->
+                <div class="navbar">
+                    <div class="logo">
+                        <a id="homelogo"><img src="../images/Logo/KicksNation NoText Logo-min.png" alt="KicksNation logo" width=125px></a>
+                        <img class="logotext" src="../images/Logo/logoletters1.png" alt="KicksNation logo" width="170px">
+                    </div>
+                    <!--menu-->
+                    <nav>         
+                        <ul id="MenuItems"><!--the call of these id in ui.js at managementjavascript-->                  
+                            <li><a id="homepageurl"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                            <li><a id="productsurl"><i class="fi fi-ss-hiking-boot"></i>  Products</a></li>
+                            <li><a id="aboutusurl"><i class="fa fa-fw fa-envelope"></i> About</a></li>
+                            <li><a id="contactusurl"> <i class="fi fi-ss-bubble-discussion"></i>  Contact</a></li>
+                            <li><a id="accounturl"><i class="fi fi-rr-circle-user"></i> Account</a></li>
+                            <li><a id="carturl" onclick="return confirmDataLoss();"><i class="fi fi-rr-shopping-cart" alt="cart"></i></a></li>
+                    </nav><!--this is the menu icon which will be displayed on smaller screens with 3 lines, and when we click on it, it will open like dropdown menu, in js-->
+                    <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()">
+                </div>   
+                <!-- Login Modal -->
+                <div id="login-modal" class="modal"></div>
+                <!-- Logout Button -->
+                <button id="logout-btn" style="display: none;">Logout</button>
+                </div>
+            </div>
+            
+            <!--------------Account Detail----------->
+        <div id="account_modal" class="modal">
+            <div class="modal-content">     
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="informationdetail()">Information</span>
+                        <span onclick="userdetail()">Account</span>
+                        <span onclick="delivereditemdetail()">Delivered</span>
+                        <hr id="Indicator">
+                    </div>
+                    <form id="ChangeInfoForm">
+                        <input type="text" id = "FNameInput">
+                        <input type="text" id = "LNameInput">
+                        <input type="text" id = "Addressinput">
+                        <input type="date" id = "Birthinput">
+                        <input type="number" id = "Phonenumberinput">
+                        <input type="text" id = "EmailInput">
+                        <button type="submit" class="btn">Change</button>
+                    </form>
+                    <form id="ChangeUserForm">
+                        <input type="text" id = "UsernameInput">     
+                        <input type="password" placeholder="Password" id = "PasswordInput">
+                        <input type="password" placeholder="Confirm Password" id = "RepasswordInput">
+                        <button type="submit" class="btn">Change</button>
+                    </form>
+                    <form id="DeliveredForm">               
+                        <table>
+                            <tbody id="ordercontainer"></tbody>
+                        </table>  
+                    </form>
+                </div>
+            </div>
+        </div>    
+        
+        <form id="ItemForm">
+            <div class="total-price">
+                <table>             
+                    <thead>
+                        <tr><th colspan="4"><span class="close" id="closeitem">&times;</span></th></tr>
+                        <tr><th id="Orderidview" value = "1" colspan="2" style="text-align: center; font-size: 30;">Order ID: 1</th> 
+                            <th id="Dateview" value = "1" colspan="4" style="text-align: center; font-size: 30;">Date: 1</th></tr>
+                        <tr>
+                            <th>Product</th>
+                            <th>Size</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itemcontainer">
+                    
+                    </tbody>   
+                    <tfoot>                       
+                        <tr>
+                            <td>Subtotal</td>
+                            <td  id = "MainSubtotal">$200.00</td>
+                        </tr>
+                        <tr>
+                            <td>Tax</td>
+                            <td  id = "Tax">$30.00</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td  id = "Total">$230.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

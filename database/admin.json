@@ -1,0 +1,97 @@
+{
+  "Storename": "Kenneth Store",
+  "Storedescription": "Selling technology",
+  "businessEmail": "kennethjohnarante@gmail.com",
+  "admin": [
+    {
+      "Adminid": 1,
+      "AdminName": "Lusam Delictor",
+      "Username": "Admin",
+      "Password": "@Admin123"
+    },
+    {
+      "Adminid": 2,
+      "AdminName": "Joshua",
+      "Username": "Admin2",
+      "Password": "@Admin123"
+    }
+  ],
+  "itemDelivered": [
+    {
+      "Orderid": 1,
+      "Date": "2024-11-25T08:40:57.196Z",
+      "Subtotal": "2461.98",
+      "Tax": "369.30",
+      "Total": "2831.28",
+      "Item": [
+        {
+          "Itemid": 1,
+          "Name": " Kyrie 2 All Star Basketball Shoes (Red)",
+          "Quantity": 2,
+          "Size": "38",
+          "Price": 730.99
+        },
+        {
+          "Itemid": 27,
+          "Name": "SUPERBOLLYMAN",
+          "Quantity": 1,
+          "Size": "38",
+          "Price": 1000
+        }
+      ]
+    },
+    {
+      "Orderid": 2,
+      "Date": "2024-11-26T00:27:49.320Z",
+      "Subtotal": "1999.98",
+      "Tax": "300.00",
+      "Total": "2299.98",
+      "Item": [
+        {
+          "Itemid": 29,
+          "Name": "SUPERMANXBOLLYMAN",
+          "Quantity": 1,
+          "Size": "40",
+          "Price": 999.99
+        },
+        {
+          "Itemid": 30,
+          "Name": "I AM MUSIC",
+          "Quantity": 1,
+          "Size": "42",
+          "Price": 999.99
+        }
+      ]
+    },
+    {
+      "Orderid": 3,
+      "Date": "2024-11-26T00:50:15.629Z",
+      "Subtotal": "4900.36",
+      "Tax": "735.05",
+      "Total": "5635.41",
+      "Item": [
+        {
+          "Itemid": 27,
+          "Name": "BUMFIGHHT",
+          "Quantity": 3,
+          "Size": "42",
+          "Price": 1000.123
+        },
+        {
+          "Itemid": 29,
+          "Name": "SUPERMANXBOLLYMAN",
+          "Quantity": 1,
+          "Size": "38",
+          "Price": 999.99
+        },
+        {
+          "Itemid": 4,
+          "Name": "Nike Calm (Green)",
+          "Quantity": 9,
+          "Size": "38",
+          "Price": 100
+        }
+      ]
+    }
+  ]
+}

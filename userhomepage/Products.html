@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/9tQ3krq/Kicks-Nation-Ecommerce-logo.png"/>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--we have added this view port tag and set initial scale to 1 so that our side shoudl be adjustable according to different devices especially for mobile devices-->
+      <title>KicksNation Products </title>
+      <link rel="stylesheet" href="../CSS/style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!--link to connect to font awesome 4 to use different icons, just type font awesome 4 cdn and click on first link and copy the url and past it here with rel="stylesheet"-->       
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+      <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+      <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+      <script defer src = "../managementjavascript/ui.js" type = "module"></script>
+      <script defer src = "Products.js" type="module"></script>
+      
+  </head>  
+  <body>
+    <!--making header-->
+    <div class="header">
+        <div class="toprectangle">
+            <p> FREE Returns and FREE Shipping </p>
+        </div>
+            <!--making navigation bar consist of logo and menu links-->
+            <div class="navbar">
+                <div class="logo">
+                    <a id="homelogo"><img src="../images/Logo/KicksNation NoText Logo-min.png" alt="KicksNation logo" width=125px></a>
+                    <img class="logotext" src="../images/Logo/logoletters1.png" alt="KicksNation logo" width="170px">
+                </div>
+                <!--menu-->
+                <nav>         
+                    <ul id="MenuItems"><!--the call of these id in ui.js at managementjavascript-->                  
+                        <li><a id="homepageurl"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                        <li><a id="productsurl"><i class="fi fi-ss-hiking-boot"></i>  Products</a></li>
+                        <li><a id="aboutusurl"><i class="fa fa-fw fa-envelope"></i> About</a></li>
+                        <li><a id="contactusurl"> <i class="fi fi-ss-bubble-discussion"></i>  Contact</a></li>
+                        <li><a id="accounturl"><i class="fi fi-rr-circle-user"></i> Account</a></li>
+                        <li><a id="carturl" onclick="return confirmDataLoss();"><i class="fi fi-rr-shopping-cart" alt="cart"></i></a></li>
+                </nav><!--this is the menu icon which will be displayed on smaller screens with 3 lines, and when we click on it, it will open like dropdown menu, in js-->
+                <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>   
+            <!-- Login Modal -->
+            <div id="login-modal" class="modal"></div>
+            <!-- Logout Button -->
+            <button id="logout-btn" style="display: none;">Logout</button>
+      </div>
+      <div>
+        <h1 class = "centertext"> Explore our Products! </p>
+     </div>
+     <!--offer-->
+    <div class="offer">
+        <div class="exlusivecontainer">
+            <div class="rowexlusives">
+                <div class="group2">
+                   <img src="../images/Exclusives/Kyrie 2 Basketball Shoe.jpg" class="offer-img"> 
+                </div>
+                <div class="group2">
+                    <p>Exclusively available on Nike</p>
+                    <h1>Kyrie 2 Basketball Shoe</h1>
+                    <small>
+                        Kyrie All Star Basketball Shoes 2 Red version from Nike 
+                    </small>
+                    <a class="btn" id="btnNike">Buy Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!--Featured Products-->
+     <!--using same class small container to maintain same styling-->
+     <div class="small container">
+        <!--using again same row class to maintain same styling -->
+       <h2 class="title">Featured Products</h2>
+        <div class="row" id="featuredproduct">
+        </div>
+
+        <!--adding latest products in class small container after featured products row-->
+
+        <h2 class="title">Latest Products</h2>
+        <div class="row" id="latestproduct">
+            
+       </div>
+
+   </div>
+
+
+     <!--using same class small container to maintain same styling-->
+     
+    <div class="small container">
+
+        <!--we have create an another row to add title and give user dropdown list with four options so they can select what they want-->
+        <div class="row row-2">
+            <h2>All Products</h2>
+             <select id = "select">
+                 <option value = "1">Default Sorting</option>
+                 <option value = "2">Highest to Lowest Price</option>
+                 <option value = "3">Lowest to Highest Price</option>
+                 <option value = "4">Highest to Lowest Rating</option>
+                 <option value = "5">Lowest to Highest Rating</option>                
+             </select>
+             <select id = "selectbrand">
+                <option value = "Default">All brand</option>
+                <option value = "Nike">Nike</option>
+                <option value = "Adidas">Adidas</option>
+                <option value = "Puma">Puma</option>
+                
+            </select>
+        </div>
+        <div id="ItemsContainer">  
+        </div>
+         <!--This is the same class which already have index.html consisting of 4 columns-->
+        <div class="page-btn" id="page-btn">   
+        </div>
+    </div>
+ 
+    <!-------footer------->
+    <div class="footer">
+        <div class="container"><!-- it will follow same styling as of header-->
+            <div class="row">
+                
+                <!--it contains 4 columns col1 contains text and col2 contain image col3 contains useful links and col4 contains social media links-->
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and Ios mobile phone.</p>
+                   
+                   <!---add images of play store and appstore in 1st column-->
+                    <div class="app-logo">
+                        <img src="../Images/play-store.png">
+                        <img src="../Images/app-store.png">
+                    </div>   
+                
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="../Images/logo-white.png">
+                    <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                    
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <!--add horizontal line and copyright text along with clickable link-->
+            <hr>
+            <a href="" class="copyright">Made with our fellow group members : Lusam Delictor, Kenneth Arante , Joshua Moril, Merylle Jane P. Abucay</a>
+        </div>
+    </div>         
+    </body>
+</html>

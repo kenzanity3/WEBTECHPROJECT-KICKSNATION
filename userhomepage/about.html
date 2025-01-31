@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/9tQ3krq/Kicks-Nation-Ecommerce-logo.png"/>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--we have added this view port tag and set initial scale to 1 so that our side shoudl be adjustable according to different devices especially for mobile devices-->
+      <title>About KicksNation </title>
+      <link rel="stylesheet" href="../CSS/style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!--link to connect to font awesome 4 to use different icons, just type font awesome 4 cdn and click on first link and copy the url and past it here with rel="stylesheet"-->       
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+      <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+      <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+      <script defer src = "../managementjavascript/ui.js" type = "module"></script>
+      <script defer src = "about.js" type = "module"></script> 
+      
+
+  </head>  
+  <body>
+    <!--making header-->
+    <div class="header">
+      <div class="toprectangle">
+          <p> FREE Returns and FREE Shipping </p>
+      </div>
+          <!--making navigation bar consist of logo and menu links-->
+          <div class="navbar">
+              <div class="logo">
+                <a id="homelogo"><img src="../images/Logo/KicksNation NoText Logo-min.png" alt="KicksNation logo" width=125px></a>
+                  <img class="logotext" src="../images/Logo/logoletters1.png" alt="KicksNation logo" width="170px">
+              </div>
+              <!--menu-->
+              <nav>         
+                  <ul id="MenuItems"><!--the call of these id in ui.js at managementjavascript-->                  
+                      <li><a id="homepageurl"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                      <li><a id="productsurl"><i class="fi fi-ss-hiking-boot"></i>  Products</a></li>
+                      <li><a id="aboutusurl"><i class="fa fa-fw fa-envelope"></i> About</a></li>
+                      <li><a id="contactusurl"> <i class="fi fi-ss-bubble-discussion"></i>  Contact</a></li>
+                      <li><a id="accounturl"><i class="fi fi-rr-circle-user"></i> Account</a></li>
+                      <li><a id="carturl" onclick="return confirmDataLoss();"><i class="fi fi-rr-shopping-cart" alt="cart"></i></a></li>
+              </nav><!--this is the menu icon which will be displayed on smaller screens with 3 lines, and when we click on it, it will open like dropdown menu, in js-->
+              <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()">
+          </div>   
+          <!-- Login Modal -->
+          <div id="login-modal" class="modal"></div>
+          <!-- Logout Button -->
+          <button id="logout-btn" style="display: none;">Logout</button>
+         </div>
+         <section class="about-section">
+            <div class="container">
+              <h1>About KicksNation</h1>
+              <p>Welcome to KicksNation, your premier destination for authentic sneakers and streetwear. Founded in 2010, our mission is to provide top-quality products and exceptional customer service.</p>
+          
+              <!-- Our Story -->
+              <div class="row">
+                <div class="col-md-6">
+                  <h2>Our Story</h2>
+                  <p>KicksNation was born out of passion for sneakers and street culture. Our team travels the globe to curate exclusive collections, collaborating with renowned brands and emerging designers.</p>
+                  <img src="../images/about-story.jpg" alt="Our Story">
+                </div>
+                <div class="col-md-6">
+                  <h2>Mission & Values</h2>
+                  <ul>
+                    <li>Authenticity: Guaranteed genuine products</li>
+                    <li>Quality: Uncompromising standards</li>
+                    <li>Customer Satisfaction: Dedicated support</li>
+                    <li>Community Engagement: Sneakerhead events and contests</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Featured Brands -->
+              <div class="categories">
+                <div class="group1">
+                    <h1>Partnered with the best brands</h1>
+                    <p>Offering an exclusive selection from three of the world's most renowned shoe brands: Nike, Adidas and Puma .</p>
+                    <a href="products.html" class="text" id="productbutton"></a>
+                </div>
+          <div class="image-container">
+            <div class="image-item">    
+                <img src="../images/Logo/NikeLogo-min.png" alt="Nike" id="firstcategory">
+                <p>NIKE</p>
+            </div>
+            <div class="image-item">        
+                <img src="../images/Logo/AdidasLogo.png" alt="Adidas" id="secondcategory">
+                <p>Adidas</p>
+            </div>
+            <div class="image-item">        
+                <img src="../images/Logo/PumaLogo-min.png" alt="Puma" id="thirdcategory">
+                <p>Puma</p>
+            </div>
+          </div>
+          </div>
+          <!----------brands-------------->
+     <p>Sponsored By</p>
+    <div class="brands">
+        <div class="small container">
+            <div class="row">
+                <div class="col-5">
+                     <img src="../images/logo-godrej.png">
+                </div>
+                <div class="col-5">
+                    <img src="../images/logo-oppo.png">
+               </div>
+               <div class="col-5">
+                <img src="../images/logo-coca-cola.png">
+                </div>
+                <div class="col-5">
+                 <img src="../images/Logo/logo-paypal.png">
+                </div>
+                 <div class="col-5">
+                   <img src="../images/logo-philips.png">
+                </div>
+
+            </div>
+        </div>
+    </div>    
+              <!-- Call to Action -->
+              <div class="row">
+                <div class="col-md-12">
+                  <a href="products.html" class="btn-explore">Explore Our Collection</a>
+                </div>
+              </div>
+            </div>
+          </section>
+            <!-------footer------->
+    <div class="footer">
+      <div class="container"><!-- it will follow same styling as of header-->
+          <div class="row">
+              
+              <!--it contains 4 columns col1 contains text and col2 contain image col3 contains useful links and col4 contains social media links-->
+              <div class="footer-col-1">
+                  <h3>Download Our App</h3>
+                  <p>Download App for Android and Ios mobile phone.</p>
+                 
+                 <!---add images of play store and appstore in 1st column-->
+                  <div class="app-logo">
+                      <img src="../images/play-store.png">
+                      <img src="../images/app-store.png">
+                  </div>   
+              </div>
+              <div class="footer-col-2">
+                  <img src="../images/Logo/logoletters1.png">
+                  <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+              </div>
+
+              <div class="footer-col-3">
+                  <h3>Useful Links</h3>
+                  <ul>
+                      <li>Coupons</li>
+                      <li>Blog Post</li>
+                      <li>Return Policy</li>
+                      <li>Join Affiliate</li>
+                  </ul>
+              </div>
+              <div class="footer-col-4">
+                  <h3>Follow Us</h3>
+                  <ul>
+                      <li>Facebook</li>
+                      <li>Twitter</li>
+                      <li>Instagram</li>
+                      <li>Youtube</li>
+                  </ul>
+              </div>
+          </div>
+          <!--add horizontal line and copyright text along with clickable link-->
+          <hr>
+          <a href=""class="copyright"> Made with our fellow group members : Lusam Delictor, Kenneth Arante , Joshua Moril, and Merylle Jane P. Abucay</a>
+      </div>
+  </div>         
+</body>   

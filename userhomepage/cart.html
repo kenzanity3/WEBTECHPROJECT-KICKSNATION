@@ -1,0 +1,134 @@
+    <!DOCTYPE html>
+    <html lang = "en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--we have added this view port tag and set initial scale to 1 so that our side shoudl be adjustable according to different devices especially for mobile devices-->
+            <title>Cart</title>
+            <link rel="stylesheet" href="../CSS/style.css"> 
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+            <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+            <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+            <script defer src="cart.js" type="module"></script>
+            <script defer src="../managementjavascript/ui.js" type="module"></script>
+            
+        </head>
+        <body>
+            <!--making header-->
+        <div class="header">
+            <div class="toprectangle">
+                <p> FREE Returns and FREE Shipping </p>
+            </div>
+                <!--making navigation bar consist of logo and menu links-->
+                <div class="navbar">
+                    <div class="logo">
+                        <a id="homelogo"><img src="../images/Logo/KicksNation NoText Logo-min.png" alt="KicksNation logo" width=125px></a>
+                        <img class="logotext" src="../images/Logo/logoletters1.png" alt="KicksNation logo" width="170px">
+                    </div>
+                    <!--menu-->
+                    <nav>         
+                        <ul id="MenuItems"><!--the call of these id in ui.js at managementjavascript-->                  
+                            <li><a id="homepageurl"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                            <li><a id="productsurl"><i class="fi fi-ss-hiking-boot"></i>  Products</a></li>
+                            <li><a id="aboutusurl"><i class="fa fa-fw fa-envelope"></i> About</a></li>
+                            <li><a id="contactusurl"> <i class="fi fi-ss-bubble-discussion"></i>  Contact</a></li>
+                            <li><a id="accounturl"><i class="fi fi-rr-circle-user"></i> Account</a></li>
+                            <li><a id="carturl" onclick="return confirmDataLoss();"><i class="fi fi-rr-shopping-cart" alt="cart"></i></a></li>
+                    </nav><!--this is the menu icon which will be displayed on smaller screens with 3 lines, and when we click on it, it will open like dropdown menu, in js-->
+                    <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()">
+                </div>   
+                <!-- Login Modal -->
+                <div id="login-modal" class="modal"></div>
+                <!-- Logout Button -->
+                <button id="logout-btn" style="display: none;">Logout</button>
+                </div>
+            </div>
+            <!--------------Cart Item Detail----------->
+
+            <div class="small container cart-page">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Size</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="CartContainer">
+                    
+                    </tbody>
+                </table>
+
+                <div class="total-price">
+                    <table>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td  id = "MainSubtotal">$200.00</td>
+                        </tr>
+                        <tr>
+                            <td>Tax</td>
+                            <td  id = "Tax">$30.00</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td  id = "Total">$230.00</td>
+                        </tr>
+                        <tr><td><button type="submit" class="btn" id="Paybutton" style="width: 200px;">Order</button></td></tr>
+
+                    </table>
+                </div>
+            </div>
+
+        
+            <!-------footer------->
+            <div class="footer">
+                <div class="container"><!-- it will follow same styling as of header-->
+                    <div class="row">
+                        
+                        <!--it contains 4 columns col1 contains text and col2 contain image col3 contains useful links and col4 contains social media links-->
+                        <div class="footer-col-1">
+                            <h3>Download Our App</h3>
+                            <p>Download App for Android and Ios mobile phone.</p>
+                        
+                        <!---add images of play store and appstore in 1st column-->
+                            <div class="app-logo">
+                                <img src="../images/play-store.png">
+                                <img src="../images/app-store.png">
+                            </div>   
+                        
+                        </div>
+
+                        <div class="footer-col-2">
+                            <img src="../images/logo-white.png">
+                            <p>Our purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                        </div>
+
+                        <div class="footer-col-3">
+                            <h3>Useful Links</h3>
+                            <ul>
+                                <li>Coupons</li>
+                                <li>Blog Post</li>
+                                <li>Return Policy</li>
+                                <li>Join Affiliate</li>
+                            </ul>
+                        </div>
+                        <div class="footer-col-4">
+                            <h3>Follow Us</h3>
+                            <ul>
+                                <li>Facebook</li>
+                                <li>Twitter</li>
+                                <li>Instagram</li>
+                                <li>Youtube</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <!--add horizontal line and copyright text along with clickable link-->
+                    <hr>
+                    <a href="" class="copyright">Made with our fellow group members : Lusam Delictor, Kenneth Arante , Joshua Moril, Merylle Jane P. Abucay</a>
+                </div>
+            </div>               
+        </body>
+
+    </html>

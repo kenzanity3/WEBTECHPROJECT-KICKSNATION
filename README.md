@@ -1,2 +1,1 @@
-# WEBTECHPROJECT-KICKSNATION
-E-COMMERCE SYSTEM INCOMPLETE ACCOUNT FEATURE UI
+E - commerce system 2 weeks project incomplete account function

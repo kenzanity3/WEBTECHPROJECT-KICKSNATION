@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product | Admin Dashboard</title>
+    <link rel="stylesheet" href="../CSS/adminstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Content -->
+<div class="main-content">
+    <h1>Add Product</h1>
+    <form id="productForm" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" required>
+      </div>
+      <div class="form-group">
+        <label for="image">Image:</label>
+        <input type="file" id="image" required>
+        <img id="preview" style="display: none; width: 100px; height: 100px;">
+      </div>
+      <div class="form-group">
+        <label for="product-description">Description:</label>
+        <textarea id="description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="product-category">Category:</label>
+        <select id="category" required>
+          <option value="">Select Category</option>
+          <!-- Populate categories from database -->
+        </select>
+      </div>
+      <button type="submit">Add Product</button>
+    </form>
+  </div>
+  
+  <script src="../managementjavascript/ui.js"></script>
+  <script src="addproductscript.js"></script>
+  </body>
+  </html>
